@@ -12,7 +12,7 @@ namespace Client_RamadhanFirdausNurmoyo_018
 {
     public partial class Form1 : Form
     {
-
+        ServiceReference1.MatematikaClient obj = new ServiceReference1.MatematikaClient();
         public Form1()
         {
             InitializeComponent();
