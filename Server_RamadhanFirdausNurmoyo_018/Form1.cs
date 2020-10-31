@@ -40,7 +40,21 @@ namespace Server_RamadhanFirdausNurmoyo_018
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ServiceHost hostObj = null;
+            try
+            {
+                hostObj = new ServiceHost(typeof(Matematika));
+                hostObj.Close();
+                label2.Text = "Server OFF";
+                label3.Text = "Klik ON untuk Mematikan Server";
+                hostObj.Open();
+            }
+            catch (Exception ex)
+            {
+                hostObj = null;
+                Console.WriteLine(ex.Message);
+                Console.ReadLine();
+            }
         }
     }
 }
